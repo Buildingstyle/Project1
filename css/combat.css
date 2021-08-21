@@ -1,0 +1,156 @@
+/*reset all items*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: lightgoldenrodyellow;
+  position: absolute;
+  left:440px;
+}
+/*viewpoint height*/
+/*body {
+  height: 100vh;
+  background: lightgoldenrodyellow;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}*/
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+:root {
+  /* Base font size */
+  font-size: 10px;   
+  
+  /* Set neon color */
+  --neon-text-color: lime;
+  
+
+}
+
+
+#h1 {
+   position: relative;
+  right:30px;
+  font-size: 30px;
+  font-weight: 200;
+  font-style: italic;
+  color: lightpink;
+  padding: 4rem 6rem 5.5rem;
+  border: 1 rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;  
+  text-align: center;
+  margin: auto;  
+
+}
+
+
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+.m-game{
+  border: 2px solid lime;
+  width: 640px;
+  height: 640px;
+  flex-wrap: wrap;
+  display: flex;
+  perspective: 1000px;
+}
+
+.m-card{
+  border: 2px solid aqua;
+  width: 25%;
+  height: 33.333%;
+  display: flex;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+.back{
+border-radius: 5%;
+border: 2px solid pink;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+.front{
+border-radius: 5%;
+border: 2px solid pink;
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+img{
+  width: 100px;
+}
+.m-card: active{
+  transform: scale(.97);
+  transition: transform .3s;
+}
+.m-card.flip{
+  transform: rotateY(180deg);
+}
+
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 7px;
+  right: 20px;
+
+  color: black;;
+  padding-left: 30px;
+  padding-right: 20px;
+  transform: rotateY(-180deg);  
+}
+
+
+.text-centerClock{
+  position: relative;
+  left: 10px;
+  font-family: 'Orbitron', sans-serif;
+  color: darkgreen;
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+ 
+}
+
+
