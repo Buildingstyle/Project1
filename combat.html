@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Memory Card</title>
+  <link rel="stylesheet" type="text/css" href="css/combat.css">
+
+</head>
+
+ <body>
+<div id ="h1">
+  <h1 contenteditable spellcheck="false">Memory Card</h1>
+  <p class="text-centerClock" id="count-down-timer"></p>
+  <br>
+</div>
+
+<audio id="audio_play" src="audio/pencel01 (1).mp3" type="audio/ogg"></audio>
+<audio id="audio_ball" src="audio/ball0001.mp3" type="audio/mpeg"></audio>
+<audio id="audio_dog" src="audio/dog00002.mp3" type="audio/mpeg"></audio>
+<audio id="audio_shark" src="audio/shark001.mp3" type="audio/mpeg"></audio>
+<audio id="audio_book" src="audio/book0001.mp3" type="audio/mpeg"></audio>
+<audio id="audio_balloon" src="audio/balloon.mp3" type="audio/mpeg"></audio>
+<audio id="audio_duck" src="audio/duck0001.mp3" type="audio/mpeg"></audio>
+<audio id="audio_shoe" src="audio/shoe0001.mp3" type="audio/mpeg"></audio>
+ <section class="m-game">
+   <div class="m-card" data-match="pencil" >
+    <img class="back"  id="1"  src="images/pencil.jpeg" onmouseover="document.getElementById('audio_play').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Pencil</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card"  data-match="Balloons">
+    <img class="back" id="2" src="images/Balloons.jpeg" onmouseover="document.getElementById('audio_balloon').play(); return false;"></img> 
+       <div class="text-block">
+        <h1>Balloon</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img>   
+  </div>
+  <div class="m-card"  data-match="shark">
+    <img class="back" id="3" src="images/baby shark.jpeg" onmouseover="document.getElementById('audio_shark').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Shark</h1>
+      </div> 
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card"  data-match="duck">
+    <img class="back" id="4" src="images/dukc.jpeg" onmouseover="document.getElementById('audio_duck').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Duck</h1>
+      </div> 
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card" data-match="Shoes">
+    <img class="back" id="5" src="images/Shoes.jpeg" onmouseover="document.getElementById('audio_shoe').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Shoes</h1>
+      </div> 
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card" data-match="dog">
+    <img class="back" id="6" src="images/dog.jpeg" onmouseover="document.getElementById('audio_dog').play(); return false;" ></img>  
+    <div class="text-block">
+        <h1>Dog</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card" data-match="Shoes">
+    <img class="back" id="7"  src="images/Shoes.jpeg" onmouseover="document.getElementById('audio_shoe').play(); return false;"></img> 
+    <div class="text-block">
+        <h1>Shoes</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img> 
+  </div>
+  <div class="m-card"  data-match="Balloons">
+      <div class="text-block">
+        <h1>Balloon</h1>
+      </div>
+    <img class="back" id="8" src="images/Balloons.jpeg" onmouseover="document.getElementById('audio_balloon').play(); return false;"></img>  
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card"  data-match="pencil">
+     <img class="back" id="9" src="images/pencil.jpeg" onmouseover="document.getElementById('audio_play').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Pencil</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img> 
+  </div>
+  <div class="m-card"  data-match="dog">
+    <img class="back" id="10" src="images/dog.jpeg" onmouseover="document.getElementById('audio_dog').play(); return false;"></img>  
+      <div class="text-block">
+        <h1>Dog</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card"  data-match="duck">
+    <img class="back" id="11" src="images/dukc.jpeg" onmouseover="document.getElementById('audio_duck').play(); return false;"></img> 
+      <div class="text-block">
+      <h1>Duck</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img> 
+  </div>
+  <div class="m-card" data-match="shark">
+    <img class="back" id="12" src="images/baby shark.jpeg" onmouseover="document.getElementById('audio_shark').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Shark</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img> 
+  </div>
+  <div class="m-card"  data-match="book">
+    <img class="back" id="13" src="images/book2.jpeg" onmouseover="document.getElementById('audio_book').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Book</h1>
+      </div> 
+    <img class="front" src="images/victory-hand.png"></img>
+  </div>
+  <div class="m-card"  data-match="ball">
+    <img class="back" id="14" src="images/ball2.jpeg" onmouseover="document.getElementById('audio_ball').play(); return false;"></img>  
+      <div class="text-block">
+        <h1>Ball</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img>  
+  </div>
+  <div class="m-card"  data-match="book">
+    <img class="back" id="15" src="images/book2.jpeg" onmouseover="document.getElementById('audio_book').play(); return false;"></img> 
+      <div class="text-block">
+        <h1>Book</h1>
+      </div>
+    <img class="front" src="images/victory-hand.png"></img> 
+  </div>
+  <div class="m-card"  data-match="ball">
+     <img class="back" id="16" src="images/ball2.jpeg" onmouseover="document.getElementById('audio_ball').play(); return false;"></img> 
+     <div class="text-block">
+        <h1>Ball</h1>
+      </div> 
+    <img class="front" src="images/victory-hand.png"></img>
+  </div> 
+</section>
+    <br>
+  <br>
+  <script type="text/javascript" src="js/Combat.js"></script>
+<script src="/Users/tom/Downloads/sweetalert2.all.js"></script> 
+ </body>
+
+</html>
