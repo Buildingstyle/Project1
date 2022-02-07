@@ -1,5 +1,5 @@
 //creating loop to loop through all the items on the list. Each item will attached to EListener
-//build in function flipcard will execute everytime card is clicked
+//build in function flip-card will execute every time card is clicked
 
 const cards = document.querySelectorAll('.m-card');
 let setflipCard = false;
@@ -21,12 +21,9 @@ let matchArray=[]
 
   function allMatch() {
     if (matchArray.length ===16){
-      Swal.fire({
-        title: 'Congratulation! Do you want to play again?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: `Yes`,
-        denyButtonText: `No`,
+      swal('Congratulation! Do you want to play again?',{
+        dangerMode: true,
+        buttons: true,
       }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       console.log("result=", result);
@@ -34,7 +31,7 @@ let matchArray=[]
         resetBoard()
         console.log("resultisconfirmed, running resetBoard()", resetBoard())
       } else if (result.isDenied) {
-          Swal.fire('Buh Bye!')
+          swal('Buh Bye!')
         } 
       })
     }
@@ -129,12 +126,9 @@ let matchArray=[]
           clearInterval(countInterval)
           
                         
-      Swal.fire({
-        title: 'You Lost! Do you want to play again?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: `Yes`,
-        denyButtonText: `No`,
+      swal("You Lost! Do you want to play again?",{
+        dangerMode: true,
+        buttons: true,
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
