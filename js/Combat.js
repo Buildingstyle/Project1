@@ -25,14 +25,12 @@ let matchArray=[]
         dangerMode: true,
         buttons: true,
       }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      console.log("result=", result);
-      if (result.isConfirmed) {
-        resetBoard()
-        console.log("resultisconfirmed, running resetBoard()", resetBoard())
-      } else if (result.isDenied) {
-          swal('Buh Bye!')
-        } 
+        if (result) {
+          resetBoard()
+        } else {
+          Swal.fire('Buh Bye!')
+          }
+        
       })
     }
   }
@@ -131,9 +129,9 @@ let matchArray=[]
         buttons: true,
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
+        if (result) {
           resetBoard()
-        } else if (result.isDenied) {
+        } else {
           Swal.fire('Buh Bye!')
           }
         })
